@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  api1:
+    build: ./api1
+    ports:
+      - "8000:8000"
+    depends_on:
+      - api2
+
+  api2:
+    build: ./api2
+    ports:
+      - "8001:8001"
