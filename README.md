@@ -7,8 +7,18 @@ Russian Roulette API (FastAPI + Docker Compose)
 - API2 เป็นตัวตัดสินว่า "ตาย" หรือ "ไม่ตาย" (สุ่มตัวเลข 1 ถึง 6 ถ้าได้ 1 "ตาย")
 
 ## วิธี Deploy ด้วย Docker Compose
+1. ติดตั้ง Docker & Docker Compose
+Docker Desktop (Windows/macOS)
+หรือ sudo apt install docker.io docker-compose (Linux)
+2. สร้าง Docker Image และรันทั้งหมดด้วยคำสั่งเดียว: docker-compose up --build
+3. 
+ระบบจะ สร้าง container สำหรับ api1 และ api2
 
-## วิธีใช้งาน API
+api1 รันที่ http://localhost:8000
+
+api2 รันที่ http://localhost:8001
+
+## วิธีใช้งาน API เเละทดสอบ
 ### ใช้งานผ่าน Swagger UI (Interactive API Docs)
 1. เปิดเบราว์เซอร์ไปที่: http://localhost:8000/docs
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6a8b9064-f283-4bb4-994d-8ded68f55771" />
