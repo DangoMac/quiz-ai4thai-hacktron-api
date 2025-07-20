@@ -4,10 +4,13 @@ from datetime import datetime
 
 app = FastAPI()
 
-@app.get("/russian-roulette")
+@app.get("/api1")
 def play(player: str = Query(...)):
     try:
-        res = requests.get("http://127.0.0.1:8001/trigger")
+        #ของ local
+        #res = requests.get("http://127.0.0.1:8001/api2")
+        print("API1: Forwarded request to API2")
+        res = requests.get("http://api2:8001/api2")
         survived = res.json().get("survived")
         if survived:
             result = "Click! You survived."
